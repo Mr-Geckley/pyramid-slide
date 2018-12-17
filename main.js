@@ -1,5 +1,6 @@
 // It is taking every bit of my will power not to go through and format this file. 
 // But one must be careful how one spends their time.
+ 
 
 // display all features on initial paint
  displayHeight();
