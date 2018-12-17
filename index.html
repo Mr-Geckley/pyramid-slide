@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: white;
+            background-color: black;
+        }
+
+        
+
+        #pyramid {
+            line-height: 0;
+            border: 3px solid red;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 10%;
+            color: black;
+            background-color: white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Pyramid Slide</h1>
+
+    <br>
+
+    <p>When you say</p>
+    <p><strong>Draw a pyramid</strong></p>
+    <p>I say:</p>
+
+    <br>
+
+    
+    <label for="brick_symbol">Brick Symbol:</label>
+    <select id="brick_symbol" name="brick_symbol" onchange="changeBrick()">
+        <option value="#">#</option>
+        <option value="@">@</option>
+        <option value="X">X</option>
+        <option value="$">$</option>
+    </select>
+
+    <div>
+    <label for="height">How high?</label> 
+    <input type="range" min="1" max="20" step="1" id="height" name="height" oninput="determineHeightAndThenDrawPyramid(), displayHeight()">
+    <span id="height_display"></span>
+    </div>
+    <!--<input type="text" id="height"/>-->
+    
+    <!-- --------------------------- see mario.js TODO 1 for explination -------------------------->
+    <!--<button id="execute" onclick="determineHeightAndThenDrawPyramid(this)">Draw a pyramid</button>-->
+
+    <!-- alternative method of tying element to onclick event:-----------------------------------------
+    check TODO 1 in the js file : ) ----------------------------------------------------------------->
+    <!-- --------------------------- see mario.js TODO 1 for explination -------------------------->
+    <br><br>
+
+    <div id="pyramid"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
